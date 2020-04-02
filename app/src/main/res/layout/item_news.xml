@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="news"
+            type="com.ssionii.rssnewsreader.data.News"/>
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_news_iv_thumbnail"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            glideImg="@{news.thumbnail}"
+            android:layout_marginRight="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_news_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="뉴스 제목"
+                android:text="@{news.title}"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/item_news_tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="뉴스 내용이다 호로롤롤로 길어지면 어떻게 될까요? 신기하죠오오오오~~~ 와아아 어떻게 될까 정말 궁금하다!!!!! "
+                android:text="@{news.description}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:lines="2"
+                android:ellipsize="end"
+                android:layout_marginVertical="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                llVisibilityByString="@{news.keyword1}">
+                <TextView
+                    android:id="@+id/item_news_tv_keyword1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_news_keyword_grey1"
+                    tools:text="키워드 1"
+                    android:text="@{news.keyword1}"
+                    android:textSize="12sp"
+                    android:textColor="@color/grey1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:layout_marginRight="6dp"/>
+                <TextView
+                    android:id="@+id/item_news_tv_keyword2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_news_keyword_grey1"
+                    tools:text="키워드 2"
+                    android:text="@{news.keyword2}"
+                    android:textSize="12sp"
+                    android:textColor="@color/grey1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:layout_marginRight="6dp"/>
+                <TextView
+                    android:id="@+id/item_news_tv_keyword3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_news_keyword_grey1"
+                    tools:text="키워드 3"
+                    android:text="@{news.keyword3}"
+                    android:textSize="12sp"
+                    android:textColor="@color/grey1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey4"/>
+</LinearLayout>
+</layout>
