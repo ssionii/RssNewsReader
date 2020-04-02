@@ -44,7 +44,6 @@ class GetXMLTask : AsyncTask<String, Void, Document>(){
     // xml 통신
     override fun doInBackground(vararg params: String?): Document? {
         val url = URL(rssUrl)
-
         try {
             val dbf : DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
             val db = dbf.newDocumentBuilder()
@@ -90,11 +89,10 @@ class GetXMLTask : AsyncTask<String, Void, Document>(){
                     ssl.postHttps(urlToRead, 2000, 2000)
 
                     val doc = Jsoup.connect(urlToRead).get()
-
                     val imgUrl = doc.select("meta[property=og:image]").attr("content")
                     val description = doc.select("meta[property=og:description]").attr("content")
 
-                    // Todo: description에서 keyword 뽑아내기
+                    // description에서 keyword 뽑아내기
                     val keywords = getKeyword(description)
 
                     if(description.isNotEmpty()){
@@ -121,20 +119,7 @@ class GetXMLTask : AsyncTask<String, Void, Document>(){
             val keywords = arrayListOf<String>()
             val map = HashMap<String, Int>()
 
-
-//            val strList = description.split(" ")
-//            for(i in 0 until strList.size){
-//                if(map.containsKey(strList[i])){
-//                    var cnt = map[strList[i]]
-//                    map.put(strList[i], cnt!!.plus(1) )
-//                }else{
-//                    map.put(strList[i], 1)
-//                }
-//            }
-//
-
-            val stringTokenizer = StringTokenizer(description, " ")
-
+            val stringTokenizer = StringTokenizer(description, " |,|.")
             var s = ""
             while(stringTokenizer.hasMoreTokens()){
                 s = stringTokenizer.nextToken()
