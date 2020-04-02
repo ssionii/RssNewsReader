@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.ssionii.rssnewsreader.MainActivity
 import com.ssionii.rssnewsreader.R
 import com.ssionii.rssnewsreader.databinding.ActivitySplashBinding
+import com.ssionii.rssnewsreader.ui.main.MainActivity
 
 class SplashActivity : AppCompatActivity(){
 

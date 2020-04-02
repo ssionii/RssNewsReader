@@ -1,14 +1,11 @@
-package com.ssionii.rssnewsreader.ui
+package com.ssionii.rssnewsreader.ui.main
 
-import android.util.Log
-import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
-import com.ssionii.rssnewsreader.MainActivity
 import com.ssionii.rssnewsreader.data.News
 import com.ssionii.rssnewsreader.util.GetXMLTask
 

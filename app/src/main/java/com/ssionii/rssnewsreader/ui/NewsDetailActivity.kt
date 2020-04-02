@@ -6,24 +6,22 @@ import android.view.KeyEvent
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.webkit.WebChromeClient
-import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.ssionii.rssnewsreader.R
 import com.ssionii.rssnewsreader.data.News
-import com.ssionii.rssnewsreader.databinding.ActivityNewsDetail2Binding
 import com.ssionii.rssnewsreader.databinding.ActivityNewsDetailBinding
 
 class NewsDetailActivity : AppCompatActivity(){
 
-    lateinit var viewDataBinding : ActivityNewsDetail2Binding
+    lateinit var viewDataBinding : ActivityNewsDetailBinding
     lateinit var news : News
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_news_detail_2)
+        viewDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_news_detail)
 
         setSupportActionBar(viewDataBinding.actNewsDetailToolbar)
 

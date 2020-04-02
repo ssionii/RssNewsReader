@@ -3,10 +3,10 @@
     <data>
         <variable
             name="mainActivity"
-            type="com.ssionii.rssnewsreader.MainActivity" />
+            type="com.ssionii.rssnewsreader.ui.main.MainActivity" />
         <variable
             name="vm"
-            type="com.ssionii.rssnewsreader.ui.NewsMainViewModel" />
+            type="com.ssionii.rssnewsreader.ui.main.NewsMainViewModel" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +15,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".ui.main.MainActivity"
     android:background="@color/white"
     android:elevation="0dp">
 

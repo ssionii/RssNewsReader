@@ -1,20 +1,12 @@
-package com.ssionii.rssnewsreader.ui
+package com.ssionii.rssnewsreader.ui.main
 
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.ssionii.rssnewsreader.R
 import com.ssionii.rssnewsreader.data.News
-import com.ssionii.rssnewsreader.databinding.ActivityMainBinding
 import com.ssionii.rssnewsreader.databinding.ItemNewsBinding
-import kotlinx.android.synthetic.main.item_news.view.*
-import java.lang.Exception
 
 class NewsRecyclerViewAdapter : RecyclerView.Adapter<NewsRecyclerViewAdapter.ViewHolder>(){
 
